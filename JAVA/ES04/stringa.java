@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class stringa {
     public static void main (String[] args){
         //a();
-        b();
-        //c();
+        //b();
+        c();
         //d();
     }
 
@@ -164,7 +164,7 @@ public class stringa {
         System.out.println("Inserisci un url: ");
         stringa = scanner.nextLine();
 
-        if (stringa.indexOf("http://") != -1)
+        if (stringa.indexOf("https://") != -1)
             System.out.println("url valido");
         else
             System.out.println("url non valido");
