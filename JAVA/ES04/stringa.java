@@ -127,43 +127,7 @@ public class stringa {
             }
         }
 
-        System.out.println("la parola piu lunga e: " + parole[x]);
-
-        // legge una stringa e controlla se e una sigla
-        System.out.println("inserisci una stringa: ");
-        stringa = scanner.nextLine();
-        boolean c = true;
-
-        for (int i = 0; i < stringa.length(); i += 2) {
-            if (stringa.charAt(i) != '.') {
-                c = false;
-            }
-        }
-
-        if (c)
-            System.out.println("la stringa e una siglia");
-        else
-            System.out.println("la stringa non e una siglia");
-
-        // legge due stringhe e controlla se sono anagrammi
-        System.out.println("inserisci due parole: ");
-        stringa = scanner.nextLine();
-        stringa2 = scanner.nextLine();
-
-        char[] lettere = stringa.toCharArray();
-        c = true;
-
-        for (int i = 0; i < stringa2.length(); i++)
-            if (stringa2.indexOf(lettere[i]) == -1)
-                c = false;
-
-        if (c)
-            System.out.println("le stringhe sono anagrammi");
-        else
-            System.out.println("le stringhe non sono anagrammi");
-
-        scanner.close();        
-
+        System.out.println("la parola piu lunga e: " + parole[x]);        
     }
 
      public static void c() {
