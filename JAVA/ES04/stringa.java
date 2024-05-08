@@ -5,6 +5,8 @@ public class stringa {
     public static void main (String[] args){
         //a();
         //b();
+        //c();
+        d();
     }
 
     public static void a(){
@@ -128,6 +130,128 @@ public class stringa {
         System.out.println("la parola piu lunga e: " + parole[x]);        
     }
     
+    public static void c() {
+        Scanner scanner = new Scanner(System.in);
+
+        // controlla se un numero di telefono e valido
+        System.out.println("Inserisci un numero di telefono: ");
+        String stringa = scanner.nextLine();
+
+        boolean c;
+
+        if (stringa.matches("3[0-9]{9}"))
+            System.out.println("Numero di telefono valido");
+        else
+            System.out.println("Numero di telefono non valido");
+
+        // controlla se un email e valida
+
+        System.out.println("Inserisci un email: ");
+        stringa = scanner.nextLine();
+
+        if (stringa.matches("[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-]+.[a-zA-Z.]")) 
+            System.out.println("Email valido");
+        else
+            System.out.println("Email non valido");
+
+        // controlla se un url e valido
+        System.out.println("Inserisci un url: ");
+        stringa = scanner.nextLine();
+
+        if (stringa.matches("https://[a-zA-Z0-9.-]+.[a-zA-Z.]")) 
+            System.out.println("url valido");
+        else
+            System.out.println("url non valido");
+
+        // controlla se e un indirizzo ip valido
+        System.out.println("inserisci un indirizzo ip: ");
+        stringa = scanner.nextLine();
+
+        if (stringa.matches("[0-255]{1}.[0-255]{1}.[0-255]{1}.[0-255]{1}"))
+            System.out.println("indirizzo ip valido");
+        else
+            System.out.println("indirizzo ip non valido");
+
+        // controlla se un codice fiscale e valido
+        System.out.println("Inserisci un codice fiscale: ");
+        stringa = scanner.nextLine();
+
+        if (stringa.matches("[A-Z]{6}[0-9]{2}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{1}"))
+            System.out.println("codice fiscale valido");
+        else
+            System.out.println("codice fiscale non valido");
+
+        // controlla se un iban e valido
+
+        System.out.println("Inserisci un iban: ");
+        stringa = scanner.nextLine();
+
+        if (stringa.matches("IT"))
+            System.out.println("iban valido");
+        else
+            System.out.println("iban non valido");
+
+        // controlla se un codice ISBN-13 e valido
+        System.out.println("Inserisci un codice ISBN-13: ");
+        stringa = scanner.nextLine();
+
+        c = true;
+
+        for (int i = 0; i < stringa.length(); i++)
+            if (!Character.isDigit(stringa.charAt(i))) {
+                c = false;
+            }
+
+        if (c && stringa.length() == 13)
+            System.out.println("codice ISBN-13 valido");
+        else
+            System.out.println("codice ISBN-13 non valido");
+
+        scanner.close();
+
+    }
+
+     public static void d() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Inserisci una frase: ");
+
+        String stringa = scanner.nextLine();
+        String stringa2 = stringa;
+
+        String[] parole = stringa2.split(" ");
+
+        // Kebab-case
+        stringa2 = String.join("-", parole);
+        System.out.println("Kebab-Case: " + stringa2);
+
+        stringa2 = stringa;
+
+        // Snake_Case
+        stringa2 = String.join("_", parole);
+        System.out.println("Snake_Case: " + stringa2);
+
+        stringa2 = stringa;
+
+        //camelCase
+        for (int i = 1; i < parole.length; i++) {
+            parole[i] = parole[i].substring(0, 1).toUpperCase() + parole[i].substring(1);
+        }
+
+        stringa2 = String.join("", parole);
+        System.out.println("camelCase: " + stringa2);
+
+        stringa2 = stringa;
+
+        //PascalCase
+
+        for (int i = 0; i < parole.length; i++) {
+            parole[i] = parole[i].substring(0, 1).toUpperCase() + parole[i].substring(1);
+        }
+
+        stringa2 = String.join("", parole);
+        System.out.println("PascalCase: " + stringa2);
+
+    }
 
     
 }
