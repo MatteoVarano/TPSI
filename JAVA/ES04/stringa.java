@@ -5,8 +5,6 @@ public class stringa {
     public static void main (String[] args){
         //a();
         //b();
-        c();
-        //d();
     }
 
     public static void a(){
@@ -129,6 +127,7 @@ public class stringa {
 
         System.out.println("la parola piu lunga e: " + parole[x]);        
     }
+    
 
     
 }
